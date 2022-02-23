@@ -1,9 +1,24 @@
 :root {
     --primary: #f2b366;
+    --secondary: #3f2f21;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    background-color: rgb(201, 201, 201);
+    padding: 2ch; 
+    border-radius: 8px;
+}
+
+.header--logo {
+    display: none;
 }
 
 .header--title {
@@ -12,11 +27,6 @@ body {
     text-shadow: 2px 2px black;
     text-align: center;
     background-color: rgb(201, 201, 201);
-}
-
-.header {
-    background-color: rgb(201, 201, 201);
-    padding: 2ch;
 }
 
 .menu--item {
@@ -39,19 +49,96 @@ body {
 .foto {
     background-image: url('/img/mobileCat.jpg');
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    height: 1000px;
-    align-items: center;
+    height: 50vh;
     background-size: cover;
+    color: white;
+    font-size: clamp(
+        1rem,
+        5vw,
+        3rem
+    );/* idealmente quiero el tamaño del texto un 5% del viewpoer, pero no disminuyas más de 2rem y nunca aumentes más de 4rem*/
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    background-position: center 20%;
 }
 
-.foto--titulo {
-    text-decoration: none;
-    text-align: unset;
-    position: absolute;
+.members {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.members--card {
+    align-items: center;
+    height: 200px;
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0 0 0 / 43%);
+}
+
+.card__patricia {
+    background: url('/img/patricia.png') no-repeat center 10%,
+    url('/img/pawns.jpg');
+}
+
+.card__veronica {
+    background: url('/img/veronica.png') no-repeat center 10%,
+    url('/img/pawns.jpg');
+}
+
+.card__edurne {
+    background: url('/img/veronica.png') no-repeat center 10%,
+    url('/img/pawns.jpg');
+}
+
+.members--title {
+    text-align: center;
+}
+
+.members--name {
+    color: var(--secondary);
+}
+
+.members--name,
+.members--role {
+    margin: 0;
+}
+
+.members--role {
+    color:white;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 6px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+@media (min-width: 598px) {
+    .header--title {
+        display: none;
+    }
+
+    .header--logo {
+        display: inline-block;
+        width: 100px;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
+}
+
+footer {
+    text-align: center;
+    padding:  3px;
+    background-color: rgba(34, 26, 26, 0.74);
     color: white;
-    bottom: 0%;
-    font-size: 50px;
-    
 }
