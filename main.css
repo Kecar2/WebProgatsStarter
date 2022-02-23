@@ -35,3 +35,23 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+.foto {
+    background-image: url('/img/mobileCat.jpg');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    align-items: center;
+    background-size: cover;
+}
+
+.foto--titulo {
+    text-decoration: none;
+    text-align: unset;
+    position: absolute;
+    color: white;
+    bottom: 0%;
+    font-size: 50px;
+    
+}
