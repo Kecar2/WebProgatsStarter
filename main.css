@@ -9,6 +9,7 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothig: antialiased; 
 }
 
 .header {
@@ -83,7 +84,22 @@ body {
     margin: 0;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0 0 0 / 43%);
+    transition: .2s all;
 }
+
+.members--card:hover .card__edurne{
+    filter: blur(3px);
+    opacity: 0.5;
+    transform: scale(.98);
+    box-shadow: none;
+}
+
+.members--card:hover .card__edurne:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+  }
 
 .card__patricia {
     background: url('/img/patricia.png') no-repeat center 10%,
@@ -121,6 +137,30 @@ body {
     font-weight: 700;
 }
 
+.footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgba(34, 26, 26, 0.74);
+    color: white;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.footer--link {
+    text-decoration: none;
+    color: red;
+}
+
+#swipeUp {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+  }
+  
+#swipeUp img {
+    width: 50px;
+  }
+
 @media (min-width: 598px) {
     .header--title {
         display: none;
@@ -134,11 +174,15 @@ body {
     .menu {
         flex-direction: row;
     }
+
+    .header {
+        display: flex;
+    }
+    .foto {
+        background-image: url(/img/sleepingCat.jpg);
+        display: flex;
+        justify-content: center;
+     align-items: flex-end;
+    }
 }
 
-footer {
-    text-align: center;
-    padding:  3px;
-    background-color: rgba(34, 26, 26, 0.74);
-    color: white;
-}
